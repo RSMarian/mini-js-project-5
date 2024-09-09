@@ -11,6 +11,8 @@ function renderItems() {
 
         const text = document.createElement("p")
         text.textContent = item
+        text.style.display = "inline"
+        text.style.marginRight = "10px"
 
         const button = document.createElement("button")
         button.textContent = "Delete"
