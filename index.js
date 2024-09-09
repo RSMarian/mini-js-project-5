@@ -1,6 +1,7 @@
 let items = ["1", "2", "3"]
 
 const itemsDiv = document.getElementById("items")
+const input = document.getElementById("itemInput")
 
 function renderItems() {
     itemsDiv.innerHTML = null;
@@ -28,6 +29,15 @@ function renderItems() {
 renderItems()
 
 function addItem() {
+    const value = input.value
+    if(!value) {
+        alert("Don't forget to write your item!")
+        return
+    }
+    
+    items.push(value)
+    renderItems()
+    input.value = ""
 }
 
 function loadItem(){
