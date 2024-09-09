@@ -16,7 +16,7 @@ function renderItems() {
 
         const button = document.createElement("button")
         button.textContent = "Delete"
-        button.onclick = removeItem(idx)
+        button.onclick = () => removeItem(idx)
 
         container.appendChild(text)
         container.appendChild(button)
@@ -36,6 +36,8 @@ function loadItem(){
 function saveItem(){
 }
 
-function removeItem(){
+function removeItem(idx){
+    items.splice(idx, 1)
+    renderItems()
 }
 
